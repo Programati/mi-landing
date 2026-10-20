@@ -1,0 +1,11 @@
+[build]
+    command = "pnpm build"
+    publish = "dist"
+
+# SPA: cualquier URL que no sea un archivo real sirve index.html
+# y React Router resuelve la ruta en el navegador.
+# Si se agregan más reglas, esta debe quedar siempre la última.
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
